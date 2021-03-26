@@ -1,7 +1,9 @@
 <?php
-//Require libraries from libraries folder
+    //Require essential files
     require_once 'libraries/Core.php';
-    require_once 'libraries/Controller.php';
+    require_once 'controllers/Controller.php';
     require_once 'libraries/Database.php';
-    require_once 'config/Config.php';
-    $init= new Core();
+    require_once 'config/config.php';
+
+    //initiate core class
+    $init = new Core();

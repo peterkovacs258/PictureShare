@@ -4,13 +4,13 @@
 define('DB_HOST','localhost');
 define('DB_USER','root');
 define('DB_PASS','');
-define('DB_NAME','nameofthedatabase');
+define('DB_NAME','pictureshare');
 
 //APPROOT
 define('APPROOT',dirname(dirname(__FILE__)));
 
 //URLROOT
-define('URLROOT','localhost/mvcframework/');
+define('URLROOT','http://localhost/pictureshare');
 
 //SITENAME
-define('SITENAME','MVC_FRAMEWORK');
+define('SITENAME','PictureShare');
