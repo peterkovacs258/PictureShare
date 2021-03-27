@@ -86,7 +86,7 @@ class Pictures extends Controller {
         if($res==false)
         {
             $likebar="<div class='card-likebar-".$pics->id."'><a  data-id=".$pics->id." data-name='like' class='btn-like btn btn-info'><i class='far fa-thumbs-up'></i></a>"
-            ."<a data-id=".$pics->id." data-name='dislike' class='btn-like btn btn-danger'><i class='far fa-thumbs-down'></i></a></div>"; 
+            ."<a data-id=".$pics->id." data-name='dislike' class='mt-1 btn-like btn btn-danger'><i class='far fa-thumbs-down'></i></a></div>"; 
         }
         //Ha már likeolta, és a tpye='like' akkor csak a like gomb megjelenítve, disabled
         else if($res->likeordislike=='like')
@@ -165,7 +165,7 @@ class Pictures extends Controller {
             if($this->pictureModel->uploadPicToDatabase($data))
             {
                 move_uploaded_file($tmpName, $fileAccess.$fileName);
-                echo'siker';
+                header('location: '.URLROOT.'/Pictures/allPictures');
             }
             else echo 'nem siker';
 

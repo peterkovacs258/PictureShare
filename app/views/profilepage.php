@@ -22,9 +22,13 @@ require APPROOT . '/views/includes/loggedNav.php';
     <div><span>Dislikes received=</span> <span><?php echo$data['dislikesReceived'];?></span></div>
     <div><span>Likes given=</span> <span><?php echo$data['likesGiven'];?></span></div>
     <div><span>Dislikes given=</span> <span><?php echo$data['dislikesGiven'];?></span></div>
-    </div>
 </div>
-<div id="uploaded-pictures"></div>
+
+<div id="uploaded-pictures"><br>
+
+    <?php echo $data['mypictures'] ?>
+</div>
+</div>
 </div>
 
 

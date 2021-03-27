@@ -197,7 +197,8 @@
             'likesReceived'=>0,
             'dislikesReceived'=>0,
             'likesGiven'=>0,
-            'dislikesGiven'=>0
+            'dislikesGiven'=>0,
+            'mypictures'=>''
         ];
         //Getting the current users id/email/name from session
         $uid=$_SESSION['user_id'];
@@ -249,6 +250,22 @@
             $data['dislikesGiven']=0;
           }
 
+          //returns all the uploads of the user
+          $res=$this->pictureModel->getAllPicturesOfUser($uid);
+          $uploadedPictures="";
+          if($res!=false)
+          {
+              $uploadedPictures="<div class=' cardholder-profile'>";
+              foreach($res as $pic)
+              {
+                  $uploadedPictures.="<div class='card'>".
+                  '<img width="400" src="'.URLROOT.'/public/img/'.$pic->filename.'" >'.
+                  "</div>";
+              }
+              $uploadedPictures.="</div>";
+              $data['mypictures']=$uploadedPictures;
+              
+          }
 
         //Setting the current view
         $this->view("profilepage",$data);

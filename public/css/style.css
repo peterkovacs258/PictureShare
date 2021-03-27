@@ -55,6 +55,12 @@ transition: var(--transition-speed) ease;
 }
 .navbar ul li a:hover
 {    font-size: 1.22rem;}
+.navbarOut li
+{
+margin:0 !important;
+margin-left: 2% !important; 
+    
+}
 
 /*LOGO*/
 .main-logo
@@ -234,7 +240,7 @@ margin-top: 4rem;
     margin-bottom: 120px;
     border-radius: 10px;
     background-color: var(--fontcolorBasic);
-    padding: 0 20px 0 20px;
+    padding: 20px 20px 0 20px;
     text-align: center;
 }
 .cardholder{
@@ -321,7 +327,7 @@ min-height: 130px;
    width:95%;
     min-width: 480px;
     margin: 120px auto 120px auto;
-    height:700px;
+    height:auto;
     background-color: var(--fontcolorBasic);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
@@ -330,22 +336,54 @@ min-height: 130px;
  
     color:white;
     padding-top: 2rem;
-
+    display: flex;
+    flex-direction: row;
+    
 }
 .menuProfile #profile-info
 {
-    margin:0 0.5rem 0 1rem;
+    margin-left: 1rem;
+    text-align: center;
+        border-radius: 5px;
     padding:0.2rem;
-    background-color: rgb(29, 29, 29);
     width:20%;
     min-width: 220px;
     height:90%;
+    
+}
+#uploaded-pictures
+{
+border:4px solid rgb(215, 215, 215);
+margin: 0 20px 20px 10px;
+width:100%;
+display: flex !important;
+justify-content: center !important;
 }
 .menuProfile #profile-info div{margin-bottom: 10px;
 }
 .menuProfile img
 {
     width:150px;
-    border-radius: 20px;
+    border-radius: 50px;
 
+}
+.cardholder-profile
+{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+.cardholder-profile img
+{
+    width:100%;
+    max-height:250px;
+    border:3px solid rgb(227, 227, 227);
+    border-radius: 5px;
+}
+.cardholder-profile .card
+{
+background-color: var(--fontcolorBasic);
+border:none;
+max-width:250px;
+box-shadow: none;
 }
